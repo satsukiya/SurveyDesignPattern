@@ -6,8 +6,6 @@ import datetime
 
 _hand_pattern_ = {0:"グー", 1:"チョキ", 2:"パー"}
 
-hand = namedtuple("Hand", ("value"))
-
 
 def fight(p1:int, p2:int):
     dst = 0
