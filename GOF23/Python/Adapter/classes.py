@@ -25,11 +25,11 @@ class Banner:
 class PrintBanner(Banner, Print):
 
     def __init__(self, string:str):
-        super(PrintBanner, self).__init__(string)
+        super().__init__(string)
 
     def printWeak(self):
-        super(PrintBanner,self).showWithParen()
+        super().showWithParen()
 
     def printStrong(self):
-        super(PrintBanner,self).showWithAster()
+        super().showWithAster()
 
