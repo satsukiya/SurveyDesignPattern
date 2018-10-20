@@ -24,14 +24,3 @@ if __name__ == '__main__':
             print(htmlbuilder.getResult() + "が作成されました。")
         else :
             usage()
-
-
-
-
-
-"""
-    textbuilder = TextBuilder()
-    director = Director(textbuilder)
-    director.construct()
-    print(textbuilder.getResult())
-"""
