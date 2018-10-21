@@ -1,0 +1,10 @@
+version: '3'
+services:
+  graphparttime:
+    image: python_design_pattern
+    container_name: python_design_pattern
+    command: tail -f /dev/null
+    volumes:
+      - .:/var/src
+    ports:
+      - "4000:80"
