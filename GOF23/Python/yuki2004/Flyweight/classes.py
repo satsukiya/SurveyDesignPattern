@@ -1,4 +1,4 @@
-
+import threading
 
 class BigChar:
     _charname = ""
@@ -31,12 +31,22 @@ class BigCharFactory:
         message = "[Singleton!]\n"
         message += "if you get a instance,\n"
         message += "you should call the get instance method."
+        new_instance = None
         try :
-            raise Exception
+            assert cls._unique_instance is None, message
+            new_instance = super().__new__(cls)
         except Exception as e:
             print(message)
 
+        return new_instance
+
+
     def getBigChar(self, charname):
+
+        _lock = threading.Lock()
+
+        # LOCK
+        _lock.acquire()
         key = "" + charname
         bc = None
         if key in self._pool:
@@ -44,7 +54,12 @@ class BigCharFactory:
         else :
             bc = BigChar(charname)
             self._pool[key] = bc
+
+        # RELEASE
+        _lock.release()
+
         return bc
+
 
 class BigString:
 
