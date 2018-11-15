@@ -1,7 +1,7 @@
 # SurveyDesignPattern
 
 ## はじめに
-増補改訂版 Java言語で学ぶデザインパターン入門　(著：結城浩)
+増補改訂版 Java言語で学ぶデザインパターン入門　(著：結城浩)<br>
 GOF23の例題を Java → Python に移行しました！<br>
 
 [メインサイト]<br>
